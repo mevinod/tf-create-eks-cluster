@@ -8,4 +8,6 @@
 Steps to execute:
 1. Run: `terraform init`
 2. Run: `terraform apply -auto-approve`
-3. Run: `aws eks --region $(terraform output -raw region) update-kubeconfig     --name $(terraform output -raw cluster_name)`
+
+Run following command to connect to eks cluster after the creation has completed.<br>
+`aws eks --region $(terraform output -raw region) update-kubeconfig     --name $(terraform output -raw cluster_name)`
